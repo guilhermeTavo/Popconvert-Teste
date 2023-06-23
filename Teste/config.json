@@ -1,0 +1,12 @@
+
+
+     {
+        "titulo" : "Título",
+        "subtitulo" : "Esta é uma mensagem de exemplo.",
+        "jogo" : "true",
+        "video" : "false",
+        "email" : "true",
+        "numero": "true",
+        "nome": "true",
+        "gen": "false" 
+     }   

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="style/mobile.css" media="screen and (max-width: 1000px)"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="home">
+
+      <!---------------------------Código do Pop up 1------------------>
+      <a href="#" onclick="openModal()">
+        <div class="popup_style"> 
+          <img src="imagens/slot.png" alt="Slot-Game">
+          <p>Play Now, and earn money!</p>
+        </div>
+      </a>
+      
+      <div id="popup" class="modal">
+        <div class="modal-content">
+          <h1 class="animate-charcter" id="popUpTitulo"></h1>
+          <p id="popUpMensagem"></p>
+          <div id="popupContent"></div>
+          <form action="">
+            <input type="text" id="nomeInput" required placeholder="Insira seu Nome">
+            <input type="number" id="numeroInput" required placeholder="Insira seu Numero">
+            <input type="email" id="emailInput" required placeholder="Insira seu Email">
+            <input type="text" id="generoInput" required placeholder="Insira seu Genero">
+            <input type="checkbox" required>
+          </form>
+          <button class="button_fechar" onclick="closeModal()">Fechar</button>
+        </div>
+      </div>
+      
+        <!-----------------JSON PRIMEIRO POPUP, FALSE ESCONDE, TRUE APARECE!------------------>
+      <script>
+        const jsonData = {
+          "titulo" : "Título",
+          "subtitulo" : "Esta é uma mensagem de exemplo.",
+          "jogo" : true,
+          "video" : false,
+          "email" : true,
+          "numero": true,
+          "nome": false,
+          "gen": false
+        };
+      
+        document.getElementById("popUpTitulo").textContent = jsonData.titulo;
+        document.getElementById("popUpMensagem").textContent = jsonData.subtitulo;
+      
+        const nomeInput = document.getElementById("nomeInput");
+        const numeroInput = document.getElementById("numeroInput");
+        const emailInput = document.getElementById("emailInput");
+        const generoInput = document.getElementById("generoInput");
+      
+        if (!jsonData.nome) {
+          nomeInput.style.display = "none";
+        }
+        if (!jsonData.numero) {
+          numeroInput.style.display = "none";
+        }
+        if (!jsonData.email) {
+          emailInput.style.display = "none";
+        }
+        if (!jsonData.gen) {
+          generoInput.style.display = "none";
+        }
+      
+        function openModal() {
+          // Abra o modal aqui
+        }
+      
+        function closeModal() {
+          // Feche o modal aqui
+        }
+      </script>
+      <!---------------------------Código do Pop up 1------------------>
+
+
+
+      <!---------------------------Código do Pop up 2------------------>
+      <a href="#" onclick="openVideo()">
+        <div class="popup_style"> 
+          <img src="imagens/video.jpg" alt="Slot-Game - Tutorial">
+          <p>Learn how to play, and earn money!</p>
+        </div>
+      </a>
+      
+      <div id="video" class="modal">
+        <div class="modal-content">
+          <div id="videoContent"></div>
+          <form action="">
+            <input type="text" id="nomeInputVideo" required placeholder="Insira seu Nome">
+            <input type="number" id="numeroInputVideo" required placeholder="Insira seu Numero">
+            <input type="email" id="emailInputVideo" required placeholder="Insira seu Email">
+            <input type="text" id="generoInputVideo" required placeholder="Insira seu Genero">
+            <input type="checkbox" required>
+          </form>
+          <button class="button_fechar" onclick="closeVideo()">Fechar</button>
+        </div>
+      </div>
+      
+      <script>
+        const jsonVideo = {
+          "titulo": "Título",
+          "subtitulo": "Esta é uma mensagem de exemplo.",
+          "jogo": true,
+          "video": false,
+          "email": true,
+          "numero": true,
+          "nome": true,
+          "gen": false
+        };
+      
+        document.getElementById("popUpTitulo").textContent = jsonVideo.titulo;
+        document.getElementById("popUpMensagem").textContent = jsonVideo.subtitulo;
+      
+        const nomeInputVideo = document.getElementById("nomeInputVideo");
+        const numeroInputVideo = document.getElementById("numeroInputVideo");
+        const emailInputVideo = document.getElementById("emailInputVideo");
+        const generoInputVideo = document.getElementById("generoInputVideo");
+      
+        if (jsonVideo.nome === false) {
+          nomeInput.style.display = "none";
+        }
+        if (jsonVideo.numero === false) {
+          numeroInput.style.display = "none";
+        }
+        if (jsonVideo.email === false) {
+          emailInput.style.display = "none";
+        }
+        if (jsonVideo.gen === false) {
+          generoInput.style.display = "none";
+        }
+      
+        function openVideo() {
+          // Abra o vídeo aqui
+        }
+      
+        function closeVideo() {
+          // Feche o vídeo aqui
+        }
+      </script>
+          <!---------------------------Código do Pop up 2------------------>
+          
+
+    </div>
+
+       
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>  
+
+</body>
+</html>
